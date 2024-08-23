@@ -287,53 +287,82 @@ def start_command(client, message):
     )
 
 # Handle the callbacks from the inline keyboard
+# @app.on_callback_query()
+# def handle_callback_query(client, callback_query):
+#     data = callback_query.data
+    
+#     if data == "visionimpact":
+#         callback_query.message.edit_text(
+#             "Vision Impact is a dynamic, tech-driven startup that blends advanced AI technology with creative storytelling to revolutionize digital experiences. Visit [Vision Impact](https://www.visionimpact.ai) for more info.",
+#             reply_markup=get_menu_keyboard()
+#         )
+#     elif data == "smart":
+#         callback_query.message.edit_text(
+#             "The Smart Channel Partner program by Vision Impact enables individuals or businesses to earn commissions by promoting AI-powered services and digital solutions. Visit [Smart Channel](https://honeydew-goldfinch-962912.builder-preview.com/) for more info.",
+#             reply_markup=get_menu_keyboard()
+#         )
+#     elif data == "master":
+#         callback_query.message.edit_text(
+#             "The Master Channel Partner program allows individuals or businesses to sell Vision Impact's services under their own brand. Visit [Master Channel](https://pink-dugong-788341.builder-preview.com/) for more info.",
+#             reply_markup=get_menu_keyboard()
+#         )
+#     elif data == "events":
+#         callback_query.message.edit_text(
+#             "Vision Impact hosts exclusive events, including networking opportunities, advanced workshops, and collaborative sessions. Visit [Events](https://gamma.app/docs/Melody-Moments-Personalized-Event-Harmony-px453jnio3nxg1t?mode=doc) for more info.",
+#             reply_markup=get_menu_keyboard()
+#         )
+#     elif data == "instaskills":
+#         callback_query.message.edit_text(
+#             "InstaSkills offers short, impactful courses focused on rapidly acquiring digital and AI skills. Visit [InstaSkills](https://gamma.app/docs/InstaSkills-Program-by--3e4p5y2ytrh3e8k?mode=doc) for more info.",
+#             reply_markup=get_menu_keyboard()
+#         )
+#     elif data == "calendly":
+#         callback_query.message.edit_text(
+#             "Vision Impact uses Calendly to streamline the booking process for discovery calls. Visit [Calendly](https://calendly.com/visionimpacttechnologies/30min?back=1&month=2024-08) for more info.",
+#             reply_markup=get_menu_keyboard()
+#         )
+#     elif data == "linktree":
+#         callback_query.message.edit_text(
+#             "Linktree is a user-friendly platform that allows you to create a single link containing multiple links to your social profiles. Visit [LinkTree](https://linktr.ee/visionimpacttech) for more info.",
+#             reply_markup=get_menu_keyboard()
+#         )
+#     elif data == "contact":
+#         callback_query.message.edit_text(
+#             "Address: #338, 6th Cross, 3rd Main, 2nd Block, 1st Stage, Kalyananagara, Nagarabhavi, Bangalore - 560072.\n"
+#             "Email: content@visionimpact.ai, visionimpacttechnologies@gmail.com\n"
+#             "Phone: +91 9606989902\n"
+#             "Visit [Google Maps](https://www.google.com/maps/place/Vision+Impact/@12.968289,77.519199,15z/data=!4m6!3m5!1s0x3bae3d25565e0617:0x98d8394031e828fb!8m2!3d12.968289!4d77.519199!16s%2Fg%2F11v_0932wy?entry=ttu) for the location.",
+#             reply_markup=get_menu_keyboard()
+#         )
+
 @app.on_callback_query()
 def handle_callback_query(client, callback_query):
     data = callback_query.data
-    
-    if data == "visionimpact":
-        callback_query.message.edit_text(
-            "Vision Impact is a dynamic, tech-driven startup that blends advanced AI technology with creative storytelling to revolutionize digital experiences. Visit [Vision Impact](https://www.visionimpact.ai) for more info.",
-            reply_markup=get_menu_keyboard()
-        )
-    elif data == "smart":
-        callback_query.message.edit_text(
-            "The Smart Channel Partner program by Vision Impact enables individuals or businesses to earn commissions by promoting AI-powered services and digital solutions. Visit [Smart Channel](https://honeydew-goldfinch-962912.builder-preview.com/) for more info.",
-            reply_markup=get_menu_keyboard()
-        )
-    elif data == "master":
-        callback_query.message.edit_text(
-            "The Master Channel Partner program allows individuals or businesses to sell Vision Impact's services under their own brand. Visit [Master Channel](https://pink-dugong-788341.builder-preview.com/) for more info.",
-            reply_markup=get_menu_keyboard()
-        )
-    elif data == "events":
-        callback_query.message.edit_text(
-            "Vision Impact hosts exclusive events, including networking opportunities, advanced workshops, and collaborative sessions. Visit [Events](https://gamma.app/docs/Melody-Moments-Personalized-Event-Harmony-px453jnio3nxg1t?mode=doc) for more info.",
-            reply_markup=get_menu_keyboard()
-        )
-    elif data == "instaskills":
-        callback_query.message.edit_text(
-            "InstaSkills offers short, impactful courses focused on rapidly acquiring digital and AI skills. Visit [InstaSkills](https://gamma.app/docs/InstaSkills-Program-by--3e4p5y2ytrh3e8k?mode=doc) for more info.",
-            reply_markup=get_menu_keyboard()
-        )
-    elif data == "calendly":
-        callback_query.message.edit_text(
-            "Vision Impact uses Calendly to streamline the booking process for discovery calls. Visit [Calendly](https://calendly.com/visionimpacttechnologies/30min?back=1&month=2024-08) for more info.",
-            reply_markup=get_menu_keyboard()
-        )
-    elif data == "linktree":
-        callback_query.message.edit_text(
-            "Linktree is a user-friendly platform that allows you to create a single link containing multiple links to your social profiles. Visit [LinkTree](https://linktr.ee/visionimpacttech) for more info.",
-            reply_markup=get_menu_keyboard()
-        )
-    elif data == "contact":
-        callback_query.message.edit_text(
-            "Address: #338, 6th Cross, 3rd Main, 2nd Block, 1st Stage, Kalyananagara, Nagarabhavi, Bangalore - 560072.\n"
-            "Email: content@visionimpact.ai, visionimpacttechnologies@gmail.com\n"
-            "Phone: +91 9606989902\n"
-            "Visit [Google Maps](https://www.google.com/maps/place/Vision+Impact/@12.968289,77.519199,15z/data=!4m6!3m5!1s0x3bae3d25565e0617:0x98d8394031e828fb!8m2!3d12.968289!4d77.519199!16s%2Fg%2F11v_0932wy?entry=ttu) for the location.",
-            reply_markup=get_menu_keyboard()
-        )
+
+    # Define a dictionary with all your callback data and corresponding messages
+    responses = {
+        "visionimpact": "Vision Impact is a dynamic, tech-driven startup that blends advanced AI technology with creative storytelling to revolutionize digital experiences. Visit [Vision Impact](https://www.visionimpact.ai) for more info.",
+        "smart": "The Smart Channel Partner program by Vision Impact enables individuals or businesses to earn commissions by promoting AI-powered services and digital solutions. Visit [Smart Channel](https://honeydew-goldfinch-962912.builder-preview.com/) for more info.",
+        "master": "The Master Channel Partner program allows individuals or businesses to sell Vision Impact's services under their own brand. Visit [Master Channel](https://pink-dugong-788341.builder-preview.com/) for more info.",
+        "events": "Vision Impact hosts exclusive events, including networking opportunities, advanced workshops, and collaborative sessions. Visit [Events](https://gamma.app/docs/Melody-Moments-Personalized-Event-Harmony-px453jnio3nxg1t?mode=doc) for more info.",
+        "instaskills": "InstaSkills offers short, impactful courses focused on rapidly acquiring digital and AI skills. Visit [InstaSkills](https://gamma.app/docs/InstaSkills-Program-by--3e4p5y2ytrh3e8k?mode=doc) for more info.",
+        "calendly": "Vision Impact uses Calendly to streamline the booking process for discovery calls. Visit [Calendly](https://calendly.com/visionimpacttechnologies/30min?back=1&month=2024-08) for more info.",
+        "linktree": "Linktree is a user-friendly platform that allows you to create a single link containing multiple links to your social profiles. Visit [LinkTree](https://linktr.ee/visionimpacttech) for more info.",
+        "contact": "Address: #338, 6th Cross, 3rd Main, 2nd Block, 1st Stage, Kalyananagara, Nagarabhavi, Bangalore - 560072.\n"
+                   "Email: content@visionimpact.ai, visionimpacttechnologies@gmail.com\n"
+                   "Phone: +91 9606989902\n"
+                   "Visit [Google Maps](https://www.google.com/maps/place/Vision+Impact/@12.968289,77.519199,15z/data=!4m6!3m5!1s0x3bae3d25565e0617:0x98d8394031e828fb!8m2!3d12.968289!4d77.519199!16s%2Fg%2F11v_0932wy?entry=ttu) for the location."
+    }
+
+    # Get the new content based on the callback data
+    new_text = responses.get(data, "")
+
+    # Only edit the message if the new content is different from the current content
+    if callback_query.message.text != new_text:
+        callback_query.message.edit_text(new_text, reply_markup=get_menu_keyboard())
+    else:
+        print("Message not modified because the content is the same.")
+
 
 # /help command handler
 @app.on_message(filters.command("help"))
