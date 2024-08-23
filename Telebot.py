@@ -249,7 +249,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # Step 1: Define your bot's configuration
 api_id = "20201694"
 api_hash = "383cdc7a9c6967d056fbcab8b3271c43"
-bot_token = "TELEGRAM_API_TOKEN"
+bot_token = "7354187331:AAFr3KsvLouDqOMlGkMEQuGeTtofPWha5VE"
 
 # Step 2: Initialize the bot client
 app = Client(
